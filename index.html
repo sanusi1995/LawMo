@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>LawMo Landing Page</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <!-- Header -->
+  <header>
+    <div class="header-content">
+      <div class="logo">Law of Motion</div>
+      <nav class="nav-links">
+        <button onclick="scrollToSection('hero')">About</button>
+        <button onclick="scrollToSection('resources')">Resources</button>
+      </nav>
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <!-- Dark Mode Toggle -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="calc-btn" id="openCalculator">
+          LAWMO-Calculator
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section with Animated Bicycle Background -->
+  <section id="hero" class="hero">
+    <!-- Animated Bicycles in Background -->
+    <div class="bike-animation-container">
+      <div class="bike bike-1">
+        <svg width="120" height="80" viewBox="0 0 120 80" class="bike-svg">
+          <circle cx="30" cy="60" r="12" stroke-width="3" fill="none" stroke="white" opacity="0.8"/>
+          <circle cx="90" cy="60" r="12" stroke-width="3" fill="none" stroke="white" opacity="0.8"/>
+          <line x1="30" y1="60" x2="90" y2="60" stroke-width="3" stroke="white" opacity="0.8"/>
+          <line x1="45" y1="30" x2="75" y2="30" stroke-width="3" stroke="white" opacity="0.8"/>
+          <line x1="45" y1="30" x2="30" y2="60" stroke-width="3" stroke="white" opacity="0.8"/>
+          <line x1="75" y1="30" x2="90" y2="60" stroke-width="3" stroke="white" opacity="0.8"/>
+          <circle cx="60" cy="45" r="10" stroke-width="2" fill="none" stroke="white" opacity="0.8"/>
+          <line x1="45" y1="30" x2="40" y2="20" stroke-width="2" stroke="white" opacity="0.8"/>
+          <line x1="40" y1="20" x2="50" y2="15" stroke-width="2" stroke="white" opacity="0.8"/>
+          <rect x="65" y="25" width="10" height="5" rx="2" fill="white" opacity="0.7"/>
+        </svg>
+      </div>
+      <div class="bike bike-2">
+        <svg width="100" height="70" viewBox="0 0 100 70" class="bike-svg">
+          <circle cx="25" cy="50" r="10" stroke-width="3" fill="none" stroke="white" opacity="0.7"/>
+          <circle cx="75" cy="50" r="10" stroke-width="3" fill="none" stroke="white" opacity="0.7"/>
+          <line x1="25" y1="50" x2="75" y2="50" stroke-width="3" stroke="white" opacity="0.7"/>
+          <line x1="35" y1="25" x2="65" y2="25" stroke-width="3" stroke="white" opacity="0.7"/>
+          <line x1="35" y1="25" x2="25" y2="50" stroke-width="3" stroke="white" opacity="0.7"/>
+          <line x1="65" y1="25" x2="75" y2="50" stroke-width="3" stroke="white" opacity="0.7"/>
+          <circle cx="50" cy="37" r="8" stroke-width="2" fill="none" stroke="white" opacity="0.7"/>
+          <line x1="35" y1="25" x2="30" y2="15" stroke-width="2" stroke="white" opacity="0.7"/>
+          <line x1="30" y1="15" x2="40" y2="10" stroke-width="2" stroke="white" opacity="0.7"/>
+          <rect x="55" y="20" width="10" height="5" rx="2" fill="white" opacity="0.6"/>
+        </svg>
+      </div>
+      <div class="bike bike-3">
+        <svg width="90" height="65" viewBox="0 0 90 65" class="bike-svg">
+          <circle cx="22" cy="45" r="9" stroke-width="2" fill="none" stroke="white" opacity="0.6"/>
+          <circle cx="68" cy="45" r="9" stroke-width="2" fill="none" stroke="white" opacity="0.6"/>
+          <line x1="22" y1="45" x2="68" y2="45" stroke-width="2" stroke="white" opacity="0.6"/>
+          <line x1="32" y1="22" x2="58" y2="22" stroke-width="2" stroke="white" opacity="0.6"/>
+          <line x1="32" y1="22" x2="22" y2="45" stroke-width="2" stroke="white" opacity="0.6"/>
+          <line x1="58" y1="22" x2="68" y2="45" stroke-width="2" stroke="white" opacity="0.6"/>
+          <circle cx="45" cy="33" r="7" stroke-width="1" fill="none" stroke="white" opacity="0.6"/>
+          <line x1="32" y1="22" x2="27" y2="12" stroke-width="2" stroke="white" opacity="0.6"/>
+          <line x1="27" y1="12" x2="37" y2="7" stroke-width="2" stroke="white" opacity="0.6"/>
+          <rect x="48" y="17" width="8" height="4" rx="2" fill="white" opacity="0.5"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Static Text Content -->
+    <div class="hero-content">
+      <h1>Solving Real Mobility Problems</h1>
+      <p class="subtitle">No more long pedaling. Activate the effortless ride with Law of Motion EBs</p>
+      <p class="hero-description">
+        We're validating the demand for affordable Electric Bicycles and reliable charging infrastructure in Lagos. Join our waitlist to be among the first to experience sustainable mobility.
+      </p>
+      <button class="waitlist-btn" onclick="scrollToSection('waitlist')">
+        Join the Waitlist
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+          <polyline points="22,6 12,13 2,6"></polyline>
+        </svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="resources" class="section">
+    <div class="section-content">
+      <div class="grid-3" id="features-grid"></div>
+    </div>
+  </section>
+
+  <!-- Problem Section -->
+  <section id="about" class="section section-alt">
+    <div class="section-content">
+      <h2 class="section-title">The Problem Delivery Riders Face</h2>
+      <p class="section-subtitle">Cyclists and delivery riders pour their energy into their work, but traditional bicycles drain both body and income</p>
+      <div class="grid-3" id="problems-grid"></div>
+    </div>
+  </section>
+
+  <!-- Waitlist -->
+  <section id="waitlist" class="section waitlist-section">
+    <div class="section-content">
+      <h2 class="section-title">Join Our EBs Waitlist</h2>
+      <p class="section-subtitle">
+        Be among the first delivery riders to experience the future of sustainable, profitable cycling in Lagos. Help us validate this solution.
+      </p>
+      <div class="waitlist-form" id="waitlistForm">
+        <form id="joinWaitlist">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="your@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number (Optional)</label>
+            <input type="tel" id="phone" placeholder="+234 813 349 2056" />
+          </div>
+          <button type="submit" class="submit-btn">Join Waitlist</button>
+          <p class="form-note">We respect your privacy. Unsubscribe anytime.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ecosystem -->
+  <section id="integrated-ecosystem" class="section">
+    <div class="section-content">
+      <h2 class="section-title">Our Integrated EBs Ecosystem</h2>
+      <p class="section-subtitle">More than bicycles—a complete system designed to empower riders and transform delivery work.</p>
+      <div class="grid-4" id="ecosystem-grid"></div>
+    </div>
+  </section>
+
+  <!-- Impact -->
+  <section id="socio-economic-impact" class="section impact-section">
+    <div class="section-content">
+      <h2 class="section-title">Socio-Economic Impact</h2>
+      <p class="section-subtitle">Transforming the lives of riders, families, and communities through sustainable, profitable mobility.</p>
+      <div class="grid-4" id="impact-grid"></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section section-alt">
+    <div class="section-content">
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="section-subtitle">Have questions about our electric bicycles or want to learn more about our solutions?</p>
+      <div style="max-width: 36rem; margin: 0 auto;">
+        <div class="contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          Lagos, Nigeria
+        </div>
+        <div class="contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          +234 813 349 2056
+        </div>
+        <div class="contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          info@lawofmotion.com
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h3 class="logo" style="margin-bottom: 1rem;">Law of Motion</h3>
+        <p style="color: var(--gray-500); margin-bottom: 1rem;">Sustainable mobility solutions for Africa.</p>
+        <div style="color: var(--gray-500);">
+          <div class="contact-item" style="justify-content: flex-start;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            Lagos, Nigeria
+          </div>
+          <div class="contact-item" style="justify-content: flex-start;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            +234 813 349 2056
+          </div>
+          <div class="contact-item" style="justify-content: flex-start;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            info@lawofmotion.com
+          </div>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Company</h4>
+        <div class="footer-links">
+          <button onclick="scrollToSection('hero')">About</button>
+          <button onclick="scrollToSection('resources')">Resources</button>
+          <button onclick="scrollToSection('socio-economic-impact')">Socio-Economic Impact</button>
+          <button onclick="scrollToSection('integrated-ecosystem')">Integrated Ecosystem</button>
+          <button onclick="scrollToSection('contact')">Contact</button>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">&copy; 2025 Law of Motion. All rights reserved.</div>
+  </footer>
+
+  <!-- Scroll to Top -->
+  <button class="scroll-top" onclick="scrollToTop()">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- Calculator Modal -->
+  <div class="modal-overlay" id="calculatorModal">
+    <div class="calculator-modal">
+      <div class="modal-header">
+        Law of Motion Hire-Purchase Calculator
+        <button class="close-calculator" id="closeCalculator">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="calc-form-group">
+          <label for="calcName">Full Name</label>
+          <input type="text" id="calcName" placeholder="e.g. Samson Adeyemi" />
+        </div>
+        <div class="calc-form-group">
+          <label for="calcPhone">Phone Number</label>
+          <input type="tel" id="calcPhone" placeholder="08031234567" />
+        </div>
+        <div class="calc-form-group">
+          <label for="calcSalary">Monthly Salary (₦)</label>
+          <input type="number" id="calcSalary" placeholder="150000" min="0" />
+        </div>
+        <div class="calc-form-group">
+          <label for="calcBikePrice">E-Bike Price (₦)</label>
+          <input type="number" id="calcBikePrice" value="700000" min="50000" />
+        </div>
+
+        <div class="slider-container">
+          <label for="durationSlider">Repayment Duration (Months)</label>
+          <input type="range" id="durationSlider" min="1" max="12" value="5" />
+          <div class="slider-label">
+            <span>1 month</span>
+            <span id="monthsDisplay">5 months</span>
+            <span>12 months</span>
+          </div>
+        </div>
+
+        <div class="result-box">
+          <div class="result-row">
+            <span>Bike Price:</span>
+            <span id="displayBikePrice">₦700,000</span>
+          </div>
+          <div class="result-row">
+            <span>Interest:</span>
+            <span id="displayInterest">₦0</span>
+          </div>
+          <div class="result-row total">
+            <span>Monthly Payment:</span>
+            <span id="displayMonthly">₦140,000</span>
+          </div>
+          <div class="result-row">
+            <span>Total Repayment:</span>
+            <span id="displayTotal">₦700,000</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Celebration Modal -->
+  <div class="inner-modal" id="celebrationModal">
+    <div class="inner-content">
+      <h2 id="modalGreeting">Congratulations!</h2>
+      <p id="modalMessage">You've taken the first step toward smarter, faster, and more profitable deliveries with Law of Motion.</p>
+      <button id="closeCelebration">Got it!</button>
+    </div>
+  </div>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
